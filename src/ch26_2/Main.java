@@ -1,10 +1,13 @@
 package ch26_2;
 
+import utils.WindowsCloser;
+
 import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
         Frame frame = new Frame("MyWin");
+        frame.addWindowListener(new WindowsCloser());
         frame.setLocation(400, 200);
         frame.setSize(300, 180);
         print("視窗 x 軸座標 : " + frame.getX());
